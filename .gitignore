@@ -1,0 +1,60 @@
+# =====================
+# BACKEND
+# =====================
+backend/.env
+backend/node_modules
+backend/logs
+backend/*.log
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/pnpm-debug.log*
+backend/lerna-debug.log*
+
+# =====================
+# ADMIN
+# =====================
+admin/.env
+admin/node_modules
+admin/dist
+admin/dist-ssr
+admin/*.local
+admin/logs
+admin/*.log
+admin/npm-debug.log*
+admin/yarn-debug.log*
+admin/yarn-error.log*
+admin/pnpm-debug.log*
+admin/lerna-debug.log*
+
+# =====================
+# FRONTEND
+# =====================
+frontend/.env
+frontend/node_modules
+frontend/dist
+frontend/dist-ssr
+frontend/*.local
+frontend/logs
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
+
+# =====================
+# GENERAL
+# =====================
+node_modules
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+
+# IDE directories
+.vscode/*
+!.vscode/extensions.json
+.idea
