@@ -13,6 +13,7 @@ const ShopContextProvider = ({ children }) => {
   const [showSearch, setShowSearch] = useState(false);
   const [cartItems, setCartItems] = useState({});
   const [products, setProducts] = useState([]);
+  const [chatMessages, setChatMessages] = useState([]);
   const [token, setToken] = useState("");
   const navigate = useNavigate();
 
@@ -67,39 +68,7 @@ const ShopContextProvider = ({ children }) => {
       }
     }
   };
-  /*
-  const addToCart = async (itemId, size) => {
-    if (!size) {
-      toast.error("Select Product Type");
-      return;
-    }
 
-    setCartItems((prevCart) => {
-      let cartData = structuredClone(prevCart);
-
-      if (cartData[itemId]) {
-        if (cartData[itemId][size]) {
-          cartData[itemId][size] += 1;
-        } else {
-          cartData[itemId][size] = 1;
-        }
-      } else {
-        cartData[itemId] = { [size]: 1 };
-      }
-
-      return cartData; // Return the updated state
-      
-      if(token){
-        try {
-          await axios.post(backendUrl + 'api/cart/add' , {itemId,size}, {headers:{token}})
-        } catch (error) {
-          console.log(error)
-          toast.error(error.message)
-        }
-      }
-    });
-  };
-*/
   const updateQuantity = async (itemId, size, quantity) => {
     let cartData = structuredClone(cartItems);
 
@@ -200,8 +169,19 @@ const ShopContextProvider = ({ children }) => {
       backendUrl,
       setToken,
       token,
+      chatMessages,
+      setChatMessages,
     }),
-    [search, showSearch, setSearch, setShowSearch, cartItems, products, token] // Dependencies for re-memoization
+    [
+      search,
+      showSearch,
+      setSearch,
+      setShowSearch,
+      cartItems,
+      products,
+      token,
+      chatMessages,
+    ] // Dependencies for re-memoization
   );
 
   return <ShopContext.Provider value={value}>{children}</ShopContext.Provider>;

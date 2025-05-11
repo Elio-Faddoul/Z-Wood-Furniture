@@ -9,8 +9,8 @@ const NewsLetterBox = () => {
         Subscribe now and get 20% off
       </p>
       <p className="text-gray-400 mt-3">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
+        Stay connected with Z-Wood Furniture — get the latest updates on new
+        arrivals, exclusive offers, and designs .
       </p>
       <form
         onSubmit={onSubmitHandler}

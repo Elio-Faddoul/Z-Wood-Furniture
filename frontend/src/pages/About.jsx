@@ -12,18 +12,19 @@ const About = () => {
         <img className="w-full md:max-w-[450px]" src={assets.about_us} alt="" />
         <div className="flex flex-col justify-center gap-6 md:w-2/4 text-gray-600">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            vehicula, ligula at facilisis cursus, erat elit tincidunt nulla, ut
-            imperdiet purus erat eu velit. Donec in tortor id orci hendrerit
-            fermentum.
+            At Z-Wood Furniture, we believe that every piece of furniture tells
+            a story — of craftsmanship, heritage, and home. Our journey began
+            with a commitment to create timeless wooden pieces that blend
+            natural beauty with modern functionality.
           </p>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            vehicula, ligula at facilisis cursus, erat elit tincidunt nulla, ut
-            imperdiet purus erat eu velit. Donec in tortor id orci hendrerit
-            fermentum. Vestibulum ante ipsum primis in faucibus orci luctus et
-            ultrices posuere cubilia curae; Integer dapibus risus a lacus
-            viverra, nec malesuada orci scelerisque.
+            From sourcing quality hardwoods to applying expert joinery
+            techniques, we take pride in every step of the process. Whether its
+            a rustic dining table, a minimalist shelf, or a custom-designed
+            console, our furniture is built to last and designed to inspire.
+            With a deep respect for tradition and an eye for innovation, Z-Wood
+            continues to grow as a trusted name in authentic, handcrafted wood
+            furniture.
           </p>
           <b className="text-gray-800">Our Mission</b>
           <p>

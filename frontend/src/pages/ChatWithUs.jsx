@@ -1,30 +1,25 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ShopContext } from "../context/ShopContext";
 import Title from "../components/Title";
 import axios from "axios";
 
 const ChatWithUs = () => {
-  const { backendUrl } = useContext(ShopContext);
-  const [messages, setMessages] = useState([]);
+  const { backendUrl, chatMessages, setChatMessages } = useContext(ShopContext);
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const messagesEndRef = useRef(null);
 
-  // ✅ Load chat from localStorage on mount
   useEffect(() => {
-    const saved = localStorage.getItem("zwood-chat");
-    if (saved) setMessages(JSON.parse(saved));
-  }, []);
-
-  // ✅ Save chat to localStorage on message update
-  useEffect(() => {
-    localStorage.setItem("zwood-chat", JSON.stringify(messages));
-  }, [messages]);
+    if (messagesEndRef.current) {
+      messagesEndRef.current.scrollTop = messagesEndRef.current.scrollHeight;
+    }
+  }, [chatMessages, loading]);
 
   const sendMessage = async () => {
     if (!input.trim()) return;
 
     const userMsg = { sender: "user", text: input };
-    setMessages((prev) => [...prev, userMsg]);
+    setChatMessages((prev) => [...prev, userMsg]);
     setInput("");
     setLoading(true);
 
@@ -38,9 +33,10 @@ const ChatWithUs = () => {
         text: response.data.reply || "Sorry, I couldn't understand that.",
       };
 
-      setMessages((prev) => [...prev, botMsg]);
+      setChatMessages((prev) => [...prev, botMsg]);
     } catch (error) {
-      setMessages((prev) => [
+      console.error("Chat error:", error);
+      setChatMessages((prev) => [
         ...prev,
         { sender: "bot", text: "Something went wrong. Please try again." },
       ]);
@@ -50,7 +46,7 @@ const ChatWithUs = () => {
   };
 
   const exportChat = () => {
-    const text = messages
+    const text = chatMessages
       .map(
         (msg) => `${msg.sender === "user" ? "You" : "Z-Wood Bot"}: ${msg.text}`
       )
@@ -66,8 +62,7 @@ const ChatWithUs = () => {
   };
 
   const clearChat = () => {
-    setMessages([]);
-    localStorage.removeItem("zwood-chat");
+    setChatMessages([]);
   };
 
   return (
@@ -77,8 +72,11 @@ const ChatWithUs = () => {
       </div>
 
       <div className="max-w-3xl mx-auto p-4 sm:p-6 bg-white rounded shadow mt-8">
-        <div className="h-[400px] overflow-y-auto border p-4 rounded mb-2">
-          {messages.map((msg, idx) => (
+        <div
+          className="h-[400px] overflow-y-auto border p-4 rounded mb-2"
+          ref={messagesEndRef}
+        >
+          {chatMessages.map((msg, idx) => (
             <div
               key={idx}
               className={`mb-2 flex ${

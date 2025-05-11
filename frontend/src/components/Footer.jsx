@@ -7,10 +7,11 @@ const Footer = () => {
         <div>
           <img src={assets.logo} className="mb-5 w-32" alt="" />
           <p className="w-full md:w-2/3 text-gray-600">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+            Crafted with care, built to last. Z-Wood Furniture brings timeless
+            wooden designs into modern homes — combining tradition, quality, and
+            style in every piece. Each item is a reflection of our passion for
+            woodworking, created to bring comfort, elegance, and character to
+            your living space.
           </p>
         </div>
 
