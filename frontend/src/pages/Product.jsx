@@ -104,27 +104,25 @@ const Product = () => {
         </div>
         <div className="flex flex-col gap-4 border px-6 py-6 text-sm text-gray-500">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            euismod nisl nec ligula feugiat, ac dapibus ligula vehicula. Nam
-            auctor magna ut elit tristique, vel tempus neque auctor. Nullam eget
-            magna at enim interdum efficitur. Integer ut volutpat est, non
-            congue neque. Vivamus vehicula, nisl sed efficitur sodales, libero
-            magna facilisis erat, et tincidunt risus risus non nunc. Nulla vitae
-            magna non leo scelerisque tempor. Sed euismod odio libero, ac
-            suscipit mi tempus in. Curabitur auctor orci sit amet ante
-            sollicitudin auctor.
+            Experience the perfect blend of craftsmanship and design with this
+            stunning wooden piece. Built from high-quality materials and
+            finished with precision, it offers both durability and timeless
+            appeal. Whether placed in a modern setting or a rustic space, it
+            effortlessly adds warmth and character to your home.
           </p>
           <p>
-            Aliquam erat volutpat. Vestibulum ac purus enim. Morbi id velit ut
-            arcu tincidunt condimentum. Vivamus nec ultricies nisi. In nec urna
-            sit amet nulla tincidunt tempus. Phasellus in dui vulputate,
-            accumsan augue sit amet, fermentum augue. Maecenas scelerisque nunc
-            ut tortor tristique, ut tincidunt elit ullamcorper. Mauris nec orci
-            vel lorem fermentum dapibus. Ut consectetur sapien nec enim
-            volutpat, at volutpat velit vehicula. Fusce at sollicitudin odio,
-            non scelerisque justo. Quisque vitae lorem sem. Fusce maximus
-            tincidunt metus, eget fringilla ante finibus sit amet. Nam
-            condimentum neque quis purus fermentum, ac malesuada libero varius.
+            Every curve, joint, and finish is thoughtfully crafted to ensure
+            long-lasting use and everyday comfort. From the selection of premium
+            wood to the precision of handcrafted assembly, each element reflects
+            a dedication to enduring quality. This piece is not just built to
+            fill a space — its designed to bring warmth, character, and
+            functionality into your daily life. Whether youre hosting guests,
+            working from home, or simply enjoying a quiet moment, this furniture
+            adapts beautifully to your needs. Designed not just to be seen, but
+            to be used and loved, it stands as a testament to our unwavering
+            commitment to craftsmanship, timeless style, and the natural beauty
+            of wood. Let it become a part of your story — a piece that ages with
+            grace and continues to bring value for years to come.
           </p>
         </div>
       </div>
