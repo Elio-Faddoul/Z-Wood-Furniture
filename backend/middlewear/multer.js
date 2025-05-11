@@ -1,20 +1,3 @@
-/*
-{------old data using cloudinary-------}
-import multer from "multer";
-
-const storage = multer.diskStorage({
-  filename: function (req, file, callback) {
-    callback(null, file.originalname);
-  },
-});
-
-const upload = multer({ storage });
-
-export default upload;
-*/
-
-//new data using images as folder to save images:
-
 import multer from "multer";
 import path from "path";
 import fs from "fs";
